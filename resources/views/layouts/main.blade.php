@@ -7,11 +7,19 @@
 
     {{ seo()->render() }}
 
+    <link rel="icon" type="image/png" href="{{ asset('assets/img/fav.png') }}">
+
     @vite('resources/css/app.css')
 </head>
 
-<body class="antialiased">
-    {{ $slot }}
+<body class="bg-gray-50 antialiased">
+    <div>
+        <x-partials.header />
+        <div>
+            {{ $slot }}
+        </div>
+    </div>
+
 </body>
 
 </html>
